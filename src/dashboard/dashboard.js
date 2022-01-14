@@ -18,7 +18,7 @@ export const DashboardPage = (props,isLogedIn) => {
                     This is Ladinar Nanda Aprilia's Gallery<br/>
                     Nim : 2201864675<br/>
                     <br/><br/>
-                    <a ><i className='fa fa-arrow-right'></i> More Info</a>
+                    <i className='fa fa-arrow-right'></i> More Info
                     </Card.Text>
                 </Card.Body>
             </Card>
