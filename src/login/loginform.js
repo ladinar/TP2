@@ -11,10 +11,6 @@ import bcrypt from "bcryptjs";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link,
   useHistory
 } from "react-router-dom";
 
