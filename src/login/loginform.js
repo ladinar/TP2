@@ -7,7 +7,6 @@ import 'font-awesome/css/font-awesome.min.css';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as Yup from 'yup';
-import bcrypt from "bcryptjs";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import {
@@ -32,7 +31,7 @@ const validationSchema = Yup.object().shape({
 
 const defaultCredential = {
     username: "userABC",
-    password: "$2a$10$hX/Z.JBU/ciueixgZQWyGOz6XWDfMZPitnP6A9akWnwYQeBFLsh3K"
+    password: "user123"
 };
 
 const MySwal = withReactContent(Swal)
@@ -72,10 +71,8 @@ const onSubmit = data => {
     if(formData.isVerified){
     const compareUname =
     defaultCredential.username !== data.username ? false : true;
-    const comparePsswd = bcrypt.compareSync(
-        data.password,
-        defaultCredential.password
-    );
+    const comparePsswd = 
+    defaultCredential.password !== data.password ? false : true;
     if (!comparePsswd || !compareUname) {
         localStorage.setItem('count', ++count)
         if(count < 3){
