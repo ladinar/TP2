@@ -178,8 +178,7 @@ const onSubmit = data => {
               <div className="invalid-feedback">{errors.acceptTerms?.message}</div>
             </div>
             <Recaptcha
-              // sitekey={process.env.REACT_APP_SITE_KEY_CAPTCHA}
-              sitekey="6LcRP_QdAAAAADDhvzes9VxIFxOM20qhQYqsJc69"
+              sitekey={process.env.REACT_APP_SITE_KEY_CAPTCHA}
               render="explicit"
               verifyCallback={verifyCallback}
               onloadCallback={callback}
